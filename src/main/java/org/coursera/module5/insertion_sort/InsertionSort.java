@@ -1,8 +1,8 @@
-package org.coursera.module5.selection_sort;
+package org.coursera.module5.insertion_sort;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class InsertionSort {
 
     private Element[] elements;
 
@@ -19,7 +19,7 @@ public class SelectionSort {
         }
     }
 
-    public SelectionSort(int[] array) {
+    public InsertionSort(int[] array) {
         elements = new Element[array.length];
         for (int i = 0; i < array.length; i++) {
             elements[i] = new Element(array[i]);
@@ -27,15 +27,12 @@ public class SelectionSort {
     }
 
     public int[] sort() {
-        int n = elements.length;
-        for (int i = 0; i < n; i++) {
-            int min = i;
-            for (int j = i + 1; j < n; j++) {
-                if (less(elements[j], elements[min])) {
-                    min = j;
+        for (int i = 0; i < elements.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (less(elements[j], elements[j - 1])) {
+                    exch(elements, j, j - 1);
                 }
             }
-            exch(elements, i, min);
         }
         return Arrays.stream(elements)
                 .mapToInt(e -> e.value)
@@ -51,5 +48,4 @@ public class SelectionSort {
     private boolean less(Comparable<Integer> v, Comparable<Integer> w) {
         return ((Element) v).value.compareTo(((Element) w).value) < 0;
     }
-
 }
