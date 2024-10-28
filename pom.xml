@@ -37,7 +37,7 @@
             <artifactId>algs4</artifactId>
             <scope>system</scope>
             <version>1.0</version>
-            <systemPath>${basedir}\lib\algs4.jar</systemPath>
+            <systemPath>${basedir}/lib/algs4.jar</systemPath>
         </dependency>
     </dependencies>
 
