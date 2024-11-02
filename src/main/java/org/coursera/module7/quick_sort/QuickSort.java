@@ -2,6 +2,11 @@ package org.coursera.module7.quick_sort;
 
 import edu.princeton.cs.algs4.StdRandom;
 
+/**
+ * This class implements the QuickSort algorithm for sorting an array of Comparable objects.
+ * It includes methods for partitioning, exchanging elements, and comparing values.
+ * The main sort method shuffles the array before sorting to improve performance on various input distributions.
+ */
 public class QuickSort {
 
     public void sort(Comparable[] a) {

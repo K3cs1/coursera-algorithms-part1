@@ -2,6 +2,13 @@ package org.coursera.module5.selection_sort;
 
 import java.util.Arrays;
 
+/**
+ * A Java implementation of Selection Sort algorithm that sorts an array of integers.
+ * The class contains an inner Element class implementing Comparable interface for comparison operations.
+ * It provides functionality to initialize the sorting algorithm with an integer array and
+ * performs the selection sort by repeatedly finding the minimum element and placing it at the beginning.
+ * The implementation includes helper methods for comparing and exchanging elements during the sort process.
+ */
 public class SelectionSort {
 
     private Element[] elements;
